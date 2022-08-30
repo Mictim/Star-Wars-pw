@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://localhost:3000",
+      "localStorage": [
+        {
+          "name": "users",
+          "value": "[{\"firstname\":\"Han\",\"lastname\":\"Solo\",\"email\":\"Han@solo.com\",\"displayname\":\"HanSolo\",\"password\":\"HanSolo1\"}]"
+        },
+        {
+          "name": "login",
+          "value": "[]"
+        }
+      ]
+    }
+  ]
+}

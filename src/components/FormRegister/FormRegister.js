@@ -55,7 +55,7 @@ export default function FormRegister ({ openModal, closeModal, setUsers, setSucc
       </div>
 
       <button className="form__submit" aria-label="create account" data-testid={'submit-btn'}>Create Account</button>
-      <p className="form__footer">Already have an account? <a href="#!" onClick={() => { openModal(true); closeModal(false); }}>Sign In</a></p>
+      <p className="form__footer">Already have an account? <a href="#!" data-testid="signin-link" onClick={() => { openModal(true); closeModal(false); }}>Sign In</a></p>
     </form>
   )
 }

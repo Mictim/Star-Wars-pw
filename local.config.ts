@@ -4,9 +4,10 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
+  globalSetup: require.resolve('./global-setup'),
 
   testMatch: [
-    'tests/**.spec.ts'],
+    'tests/scenarios/**.spec.ts'],
   
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
@@ -47,7 +48,7 @@ const config: PlaywrightTestConfig = {
     /* Base URL to use in actions like `await page.goto('/')`. 
     */
     baseURL: 'http://localhost:3000/',
-
+    storageState: 'state.json',
     /*
       Geolocation
     */
