@@ -1,12 +1,12 @@
 # Star Wars
 
-Página web de STAR WARS usando la información de la API [SWAPI](https://swapi.dev/ "documentación SWAPI").
+STAR WARS web page using the information from the [SWAPI] API (https://swapi.dev/ "SWAPI documentation").
 
-La web desarrollada es una web con información sobre las naves de Star Wars y sus pilotos. El listado de naves es el obtenido de la API.
+The developed website is a website with information about the Star Wars ships and their pilots. The ship list is the one obtained from the API.
 
-La pantalla de registro permite registrarse a los usuarios mediante **Localstorage**, y hacer login posteriormente. El listado de naves solo es visible para los usuarios registrados.
+The registration screen allows users to register through **Localstorage**, and log in later. The ship list is only visible to registered users.
 
-También muestra una lista de los actores, con los detalles sobre que naves saben pilotar y las películas en las que aparecen.
+It also shows a list of the actors, with details on what ships they can fly and the movies they appear in.
 
 ## Demo
 
@@ -14,7 +14,7 @@ También muestra una lista de los actores, con los detalles sobre que naves sabe
 
 ## Instalación
 
-Usar el package manager [npm](https://docs.npmjs.com/) para la instalación.
+Use the package manager [npm](https://docs.npmjs.com/) for installation.
 
 ```bash
 # install dependencies
@@ -29,7 +29,7 @@ npm run build
 
 ## Objetivos
 
-Crear una página de STAR WARS usando:
+Create a STAR WARS page using:
 
 - [REACT](https://es.reactjs.org/)
 - [React Router](https://reactrouter.com/web/guides/quick-start)
@@ -40,10 +40,17 @@ Crear una página de STAR WARS usando:
 ## Test
 
 ```bash
-# Launches the test runner in the interactive watch mode.
+# Launches the playwright tests.
 npm test
 ```
 
-## Licencia
+## Allure Report for Test Execution
+
+```bash
+# Launches the allure report page
+npm allure-report
+```
+
+## Licence
 
 [MIT](https://choosealicense.com/licenses/mit/)
