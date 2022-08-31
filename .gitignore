@@ -27,3 +27,4 @@ yarn-error.log*
 /playwright-results
 /test-results
 state.json
+/allure-results

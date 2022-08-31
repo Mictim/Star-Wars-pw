@@ -47,7 +47,7 @@ test('test', async ({ page }) => {
   await expect(page).toHaveURL('/starships');
 
   // Click [data-testid="element-2"]
-  await page.locator('[data-testid="star destroyer"]').click();
+  await page.locator('[data-name="Star Destroyer"]').click();
   await expect(page).toHaveURL('/starships/3');
 
   // Click text=ACTORS

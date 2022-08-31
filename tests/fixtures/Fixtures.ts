@@ -6,6 +6,7 @@ import { MainPage } from '../pages/MainPage';
 import { SignupPage } from '../pages/SignupPage';
 import { LoginSteps } from '../steps/LoginSteps';
 import { SignupSteps } from '../steps/SignupSteps';
+import { ActorsPage } from '../pages/ActorsPage';
 import { Utils } from '../util/Utils';
 
 export type TestOptions = {
@@ -16,7 +17,10 @@ export type TestOptions = {
     loginPage: LoginPage;
     loginSteps: LoginSteps;
     mainPage: MainPage;
-    utils: Utils
+    utils: Utils;
+    actorsPage: ActorsPage;
+    // starshipsPage: Start
+
 }
 
 export const test = base.extend<TestOptions>({
@@ -56,6 +60,9 @@ export const test = base.extend<TestOptions>({
     },
     mainPage: async({page}, use) => {
         await use(new MainPage(page))
+    },
+    actorsPage: async({page}, use) => {
+        await use(new ActorsPage(page))
     },
     utils: async({page}, use) => {
         await use(new Utils(page))

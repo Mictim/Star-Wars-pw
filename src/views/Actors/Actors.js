@@ -53,9 +53,9 @@ export default function Actors () {
             <List list={actorsList} page={'actors'} />
             {
               actorsList.length < 82 ? (
-                <Button open={handleAddActors} text={'VIEW MORE'} name={'view__button'} />
+                <Button open={handleAddActors} text={'VIEW MORE'} name={'view__button'} data-testid="view-more-btn" />
               ) : (
-                <Button open={handleScrollTop} text={'BACK TO TOP'} name={'view__button'} />
+                <Button open={handleScrollTop} text={'BACK TO TOP'} name={'view__button'} data-testid="to-top-btn" />
               )
             }
           </>
