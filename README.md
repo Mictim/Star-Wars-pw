@@ -12,7 +12,7 @@ It also shows a list of the actors, with details on what ships they can fly and 
 
 ![star wars clone](./src/assets/gifs/DemoProject.gif)
 
-## Instalación
+## Installation
 
 Use the package manager [npm](https://docs.npmjs.com/) for installation.
 
@@ -27,7 +27,7 @@ npm start
 npm run build
 ```
 
-## Objetivos
+## Objectives
 
 Create a STAR WARS page using:
 
