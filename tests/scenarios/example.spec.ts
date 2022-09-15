@@ -10,7 +10,7 @@ test('test', async ({ page }) => {
 
   // Fill [placeholder="First Name"]
   await page.locator('[placeholder="First Name"]').fill('Han');
-
+  
   // Fill [placeholder="Last Name"]
   await page.locator('[placeholder="Last Name"]').fill('Solo');
 
@@ -34,8 +34,7 @@ test('test', async ({ page }) => {
 
   // Fill [placeholder="Username or Email Address"]
   await page.locator('input[data-testid="name"]').fill('HanSolo');
-
-
+  
   // Fill [placeholder="Password"]
   await page.locator('input[data-testid="password"]').fill('HS1234');
 

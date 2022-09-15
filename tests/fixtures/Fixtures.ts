@@ -68,3 +68,5 @@ export const test = base.extend<TestOptions>({
         await use(new Utils(page))
     }
 })
+
+export { expect } from '@playwright/test';

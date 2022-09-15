@@ -94,9 +94,10 @@ const config: PlaywrightTestConfig = {
   outputDir: 'playwright-results/',
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   port: 3000,
-  // },
+  webServer: {
+    command: 'npm run start',
+    port: 3000,
+    reuseExistingServer: true
+  },
 };
 export default config;

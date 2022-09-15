@@ -1,5 +1,6 @@
 import { Locator, Page } from '@playwright/test';
 import { MainPage } from './MainPage';
+
 export class LoginPage extends MainPage {
     readonly usernameInput: Locator;
     readonly passwordInput: Locator;
