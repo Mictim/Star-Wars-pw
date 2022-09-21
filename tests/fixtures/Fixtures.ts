@@ -8,6 +8,7 @@ import { LoginSteps } from '../steps/LoginSteps';
 import { SignupSteps } from '../steps/SignupSteps';
 import { ActorsPage } from '../pages/ActorsPage';
 import { Utils } from '../util/Utils';
+import { ActorsSteps } from '../steps/ActorsSteps';
 
 export type TestOptions = {
     defaultUser: User;
@@ -19,6 +20,7 @@ export type TestOptions = {
     mainPage: MainPage;
     utils: Utils;
     actorsPage: ActorsPage;
+    actorsSteps: ActorsSteps;
     // starshipsPage: Start
 
 }
@@ -66,6 +68,9 @@ export const test = base.extend<TestOptions>({
     },
     utils: async({page}, use) => {
         await use(new Utils(page))
+    },
+    actorsSteps: async({page}, use) => {
+        await use(new ActorsSteps(page));
     }
 })
 
