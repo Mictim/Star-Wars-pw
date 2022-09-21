@@ -8,8 +8,9 @@ test.describe.parallel('Test Cases for Actors data verification', () => {
     }) => {
         const actors = await actorsPage.openActorsPage();
         await test.step('Verify actors names on the Actors Page', async() => {
-            await expect.soft((await actorsPage.actorLink.allInnerTexts()).map(value => value.replace('\n', '')))
-            .toEqual(actors.results.map(actor => actor.name));
+            await expect.soft((await actorsPage.actorLink.allInnerTexts())
+                .map(value => value.replace('\n', ''))
+            ).toEqual(actors.results.map(actor => actor.name));
         })
     })
 })
