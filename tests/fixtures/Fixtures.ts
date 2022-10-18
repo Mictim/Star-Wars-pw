@@ -1,4 +1,4 @@
-import {test as base} from '@playwright/test';
+import {selectors, test as base} from '@playwright/test';
 import { NewUser } from '../model/NewUser';
 import { User } from '../model/User';
 import { LoginPage } from '../pages/LoginPage';
@@ -27,14 +27,16 @@ export type TestOptions = {
 
 export const test = base.extend<TestOptions>({
     page: async ({browser, baseURL, defaultUser}, use) => {
+        selectors.setTestIdAttribute('data-testid');
         const context = await browser.newContext({storageState: "state.json"});
         const page = await context.newPage();
         await page.goto(baseURL!);
-        await page.locator('data-testid=log-in-btn').click();
-        await page.locator('data-testid=name').fill(defaultUser.username);
-        await page.locator('data-testid=password').fill(defaultUser.password);
-        await page.locator('data-testid=signin-btn').click();
+        await page.getByTestId('log-in-btn').click();
+        await page.getByTestId('name').fill(defaultUser.username);
+        await page.getByTestId('password').fill(defaultUser.password);
+        await page.getByTestId('signin-btn').click();
         await use(page);
+        await page.close();
     },
     defaultUser: async({}, use) => {
         await use({username: "HanSolo", password: "HanSolo1"} as User);

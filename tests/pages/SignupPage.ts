@@ -13,13 +13,13 @@ export class SignupPage extends MainPage {
 
     constructor(page: Page) {
         super(page);
-        this.firstNameInput = page.locator('data-testid=firstname');
-        this.lastNameInput = page.locator('data-testid=lastname');
-        this.emailInput = page.locator('data-testid=email');
-        this.usernameInput = page.locator('data-testid=displayname');
-        this.passwordInput = page.locator('data-testid=password');
-        this.createAccountBtn = page.locator('data-testid=submit-btn');
-        this.closeModalWindowBtn = page.locator('data-testid=modal-close-btn');
-        this.signinLinkBtn = page.locator('data-testid=signin-link');
+        this.firstNameInput = page.getByTestId('firstname');
+        this.lastNameInput = page.getByTestId('lastname');
+        this.emailInput = page.getByTestId('email');
+        this.usernameInput = page.getByTestId('displayname');
+        this.passwordInput = page.getByTestId('password');
+        this.createAccountBtn = page.getByTestId('submit-btn');
+        this.closeModalWindowBtn = page.getByTestId('modal-close-btn');
+        this.signinLinkBtn = page.getByTestId('signin-link');
     }
 }

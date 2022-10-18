@@ -9,9 +9,9 @@ export class LoginPage extends MainPage {
 
     constructor(page: Page) {
         super(page);
-        this.usernameInput = page.locator('data-testid=name');
-        this.passwordInput = page.locator('data-testid=password');
-        this.signinBtn = page.locator('data-testid=signin-btn');
-        this.newAccountCreateBtn = page.locator('data-testid=create-acc-btn');
+        this.usernameInput = page.getByTestId('name');
+        this.passwordInput = page.getByTestId('password');
+        this.signinBtn = page.getByTestId('signin-btn');
+        this.newAccountCreateBtn = page.getByTestId('create-acc-btn');
     }
 }

@@ -19,12 +19,12 @@ export class MainPage {
         this.page = page;
         this.loginBtn = page.locator('button[data-testid="log-in-btn"]');
         this.signupBtn = page.locator('button[data-testid="signup-btn"]');
-        this.logoutBtn = page.locator('data-testid=log-out-btn');
+        this.logoutBtn = page.getByTestId('log-out-btn');
         this.loggedUser = page.locator('[data-testid="logged-user"]');
 
-        this.homeLinkBtn = page.locator('data-testid=nav-home');
-        this.starshipsLinkBtn = page.locator('data-testid=nav-starships');
-        this.actorsLinkBtn = page.locator('data-testid=nav-actors');
+        this.homeLinkBtn = page.getByTestId('nav-home');
+        this.starshipsLinkBtn = page.getByTestId('nav-starships');
+        this.actorsLinkBtn = page.getByTestId('nav-actors');
         this.modalWindow = page.locator('div.modal');
     }
 
