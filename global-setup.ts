@@ -1,20 +1,20 @@
 // global-setup.ts
 import { chromium, FullConfig } from '@playwright/test';
-import { SignupSteps } from './tests/steps/Signup.steps';
-import { User } from './tests/model/User';
+import { SignupSteps } from './tests/steps/SignupSteps';
+import { NewUser } from './tests/model/NewUser';
 
 async function globalSetup(config: FullConfig) {
   const { baseURL, storageState } = config.projects[0].use;
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  await page.goto(baseURL!, {timeout: 90000});
+  await page.goto(baseURL!);
 
-  const newUser: User = {
+  const newUser: NewUser = {
         firstname: "Han", 
         lastname: "Solo", 
         email: "Han@solo.com", 
         displayname: "HanSolo", 
-        password: "HanSolo1"} as User;
+        password: "HanSolo1"} as NewUser;
   const signupSteps = new SignupSteps(page); 
   await signupSteps.signupBtn.click();
   await signupSteps.fillSignUpForm(newUser);

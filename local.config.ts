@@ -4,8 +4,10 @@ import { PlaywrightTestConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
+  globalSetup: require.resolve('./global-setup'),
 
-  testDir: 'tests',
+  testMatch: [
+    'tests/scenarios/**.spec.ts'],
   
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
@@ -24,16 +26,17 @@ const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  retries: process.env.CI ? 1 : 0,
+  retries: 0,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 5 : 3,
-
+  //workers: process.env.CI ? 2 : undefined,
+  workers : 3,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['dot'],
-    ['allure-playwright']
+    ['list'],
+    ['html', {  outputFolder: 'test-results/html-report',
+                open: "on-failure" }]
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -45,7 +48,7 @@ const config: PlaywrightTestConfig = {
     /* Base URL to use in actions like `await page.goto('/')`. 
     */
     baseURL: 'http://localhost:3000/',
-
+    storageState: 'state.json',
     /*
       Geolocation
     */
@@ -55,9 +58,9 @@ const config: PlaywrightTestConfig = {
     permissions: ['geolocation'],
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: process.env.CI ? 'on-first-retry' : 'on',
+    trace: 'on',
     screenshot: 'on',
-    video: process.env.CI ? 'retain-on-failure' : 'on'
+    video: 'on',
     
   },
 
@@ -72,19 +75,19 @@ const config: PlaywrightTestConfig = {
       },
     },
 
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //   },
+    // },
 
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //   },
+    // },
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */

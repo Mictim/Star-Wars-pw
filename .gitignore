@@ -29,10 +29,3 @@ yarn-error.log*
 state.json
 /allure-results
 /allure-report
-/playwright-report
-/screenshots/*
-/test-results/
-/playwright-report/
-/playwright/.cache/
-/tests/resources/har/*
-!/tests/resources/har/*.har
