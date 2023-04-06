@@ -2,7 +2,7 @@ import { StarshipDetails } from "./StarshipDetails";
 
 export interface Starships {
   count: number;
-  next?: any;
-  previous?: any;
+  next?: string;
+  previous?: string;
   results: StarshipDetails[];
 }
