@@ -19,6 +19,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
       - name: Playwright Component Tests
+        if: always()
         run: npm run test-ct
       - uses: actions/upload-artifact@v3
         if: always()
