@@ -2,7 +2,6 @@ import { selectors, test as base } from '@playwright/test';
 import { User } from '../model/User';
 import { LoginSteps } from '../steps/Login.steps';
 import { SignupSteps } from '../steps/Signup.steps';
-import { ActorsPage } from '../pages/Actors.page';
 import { PageUtils } from '../util/PageUtils';
 import { ActorsSteps } from '../steps/Actors.steps';
 
