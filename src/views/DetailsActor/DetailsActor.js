@@ -48,18 +48,18 @@ export default function DetailsActors () {
       <div className="details">
         {
           actor && (
-            <div className="actor" data-testid="actor-name">
+            <div className="actor">
               <h3>{actor.name}</h3>
               <div className="actor__details">
                 <div>
-                  <p className="actor__detail" data-testid="actor-height">Height: <span>{actor.height}</span></p>
-                  <p className="actor__detail" data-testid="actor-mass">Mass: <span>{actor.mass}</span></p>
-                  <p className="actor__detail" data-testid="actor-hair-color">Hair color: <span>{actor.hair_color}</span></p>
+                  <p className="actor__detail">Height: {actor.height}</p>
+                  <p className="actor__detail">Mass: {actor.mass}</p>
+                  <p className="actor__detail">Hair color: {actor.hair_color}</p>
                 </div>
                 <div>
-                  <p className="actor__detail" data-testid="actor-skin-color">Skin color: <span>{actor.skin_color}</span></p>
-                  <p className="actor__detail" data-testid="actor-birth">Birth year: <span>{actor.birth_year}</span></p>
-                  <p className="actor__detail" data-testid="actor-gender">Gender: <span>{actor.gender}</span></p>
+                  <p className="actor__detail">Eye color: {actor.skin_color}</p>
+                  <p className="actor__detail">Birth year: {actor.birth_year}</p>
+                  <p className="actor__detail">Gender: {actor.gender}</p>
                 </div>
               </div>
             </div>
