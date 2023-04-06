@@ -21,7 +21,7 @@ Use the package manager [npm](https://docs.npmjs.com/) for installation.
 npm install
 
 # Runs the app in the development mode
-npm start
+npm run start
 
 # Runs the app in the development mode.
 npm run build
@@ -41,14 +41,14 @@ Create a STAR WARS page using:
 
 ```bash
 # Launches the playwright tests.
-npm test
+npm run test
 ```
 
 ## Allure Report for Test Execution
 
 ```bash
-# Launches the allure report page
-npm allure-report
+# Launches the Allure Report page
+npm run allure-report
 ```
 
 ## Licence

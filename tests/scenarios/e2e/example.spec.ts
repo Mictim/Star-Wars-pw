@@ -61,4 +61,6 @@ test('test', async ({ page }) => {
   await page.locator('text=LOG OUT').click();
   await expect(page).toHaveURL('http://localhost:3000/');
 
+  await page.close();
+
 });
