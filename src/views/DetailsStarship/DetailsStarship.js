@@ -54,19 +54,19 @@ export default function Details () {
                 <img src={imgSrc ? imgSrc : defaultImage} onError={() => setImgSrc(defaultImage)} alt="" />
               </div>
               <div className="details__bar"></div>
-              <div className="details__info">
+              <div className="details__info" data-testid="starship-name">
                 <h3>{starship.name}</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsam corrupti itaque! Quidem similique inventore eius nam esse earum voluptate velit molestias officia, fugit possimus omnis recusandae eaque et laborum ducimus beatae officiis pariatur aliquid. Itaque, cupiditate. Voluptas, adipisci ipsam.</p>
                 <div className="details__starship">
                   <div>
-                    <p>Model: <span data-testid={'model'}>{starship.model}</span></p>
-                    <p>Manufacturer: <span data-testid={'manufacturer'}>{starship.manufacturer}</span></p>
-                    <p>Cost in credits: <span data-testid={'cost'}>{starship.cost_in_credits}</span></p>
+                    <p>Model: <span data-testid={'starship-model'}>{starship.model}</span></p>
+                    <p>Manufacturer: <span data-testid={'starship-manufacturer'}>{starship.manufacturer}</span></p>
+                    <p>Cost in credits: <span data-testid={'starship-cost'}>{starship.cost_in_credits}</span></p>
                   </div>
                   <div>
-                    <p>Length: <span data-testid={'length'}>{starship.length}</span></p>
-                    <p>Atmospheric Speed: <span data-testid={'speed'}>{starship.max_atmosphering_speed}</span></p>
-                    <p>Crew: <span data-testid={'crew'}>{starship.crew}</span></p>
+                    <p>Length: <span data-testid={'starship-length'}>{starship.length}</span></p>
+                    <p>Atmospheric Speed: <span data-testid={'starship-speed'}>{starship.max_atmosphering_speed}</span></p>
+                    <p>Crew: <span data-testid={'starship-crew'}>{starship.crew}</span></p>
                   </div>
                 </div>
               </div>

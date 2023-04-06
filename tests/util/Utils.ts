@@ -1,22 +1,15 @@
-import { MainPage } from '../pages/MainPage';
-import { Page, expect } from '@playwright/test';
+import { MainPage } from '../pages/Main.page';
+import { Page, test, expect, Locator } from '@playwright/test';
+
 export class Utils {
-    private page: Page;
 
-    constructor(page: Page) {
-        this.page = page;
+    /**
+     * Attach JSON to the report
+     * @param body - Body for attached JSON, e.g. Response from endpoint 
+     * @param description - name/description of the JSON
+     */
+    static attachJson(body: any, description: string) {
+        test.info().attach(description, {contentType: "application/json", body: body});
     }
 
-    async checkIfUserLogged(): Promise<boolean> {
-        return new MainPage(this.page).loginBtn.isHidden();
-    }
-    
-    async logoutWhenUserLoggedIn(): Promise<void> {
-        const mainPage = new MainPage(this.page);
-        if (await this.checkIfUserLogged()) {
-            await mainPage.logoutBtn.click();
-        }
-        await expect.soft(mainPage.loggedUser).not.toBeVisible();
-        await expect.soft(mainPage.loginBtn).toBeEnabled();
-    }
 }
