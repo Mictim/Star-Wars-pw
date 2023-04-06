@@ -63,21 +63,21 @@ const config: PlaywrightTestConfig = {
 
     projects: [
         {
-            name: 't3a-pw-template-chrome',
+            name: 'sw-chrome',
             use: {
                 ...devices['Desktop Chrome'],
                 baseURL: 'http://localhost:3000/',
             },
         },
         {
-            name: 't3a-pw-template-firefox',
+            name: 'sw-firefox',
             use: {
                 ...devices['Desktop Firefox'],
                 baseURL: 'http://localhost:3000/',
             },
         },
         {
-            name: 't3a-pw-template-edge',
+            name: 'sw-edge',
             use: {
                 ...devices['Desktop Edge'],
                 baseURL: 'http://localhost:3000/',
