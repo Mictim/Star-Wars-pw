@@ -83,6 +83,13 @@ const config: PlaywrightTestConfig = {
                 baseURL: 'http://localhost:3000/',
             },
         },
+        {
+            name: 'sw-safari',
+            use: {
+                ...devices['Desktop Safari'],
+                baseURL: 'http://localhost:3000/',
+            },
+        },
     ],
 
     /* Test will deploy locally application and remove it after execution */
