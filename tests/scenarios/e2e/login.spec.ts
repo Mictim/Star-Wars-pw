@@ -3,7 +3,7 @@ import { test, expect } from "../../fixtures/fixtures";
 test.describe.parallel('[E2E] Login scenarios', () => {
 
     test(`[E2E] Login to webpage as default user`, async({
-        loginSteps, defaultUser, utils, page
+        loginSteps, defaultUser, utils
     }) => {
         await utils.logoutWhenUserLoggedIn();
         await loginSteps.login(defaultUser);

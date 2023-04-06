@@ -24,8 +24,7 @@ test('[API] Actor API Mock example', async ({ context, apiBaseUrl }) => {
             url: '',
         }
         const page: Page = await context.newPage()
-        await page.route(`${apiBaseUrl}people/1/`, async (route) => {
-            // const response = await route.fetch();
+        await page.route(`${apiBaseUrl}/people/1/`, async (route) => {
             const response = await route.fetch()
             const json = JSON.stringify(actor)
             await route.fulfill({ status: 200, body: json })
@@ -34,7 +33,7 @@ test('[API] Actor API Mock example', async ({ context, apiBaseUrl }) => {
     })
 
     await test.step(`Get Response from "**/people/1/" endpoint`, async () => {
-        const response = await page.goto(`${apiBaseUrl}people/1/`)
+        const response = await page.goto(`${apiBaseUrl}/people/1/`)
         const jsonResponse = (await response!.json()) as unknown as ActorDetails
         expect(jsonResponse.name, ` ${jsonResponse.name}`).toBe('Mike Jones')
         Utils.attachJson(JSON.stringify(jsonResponse), "ActorDetail's Response")

@@ -15,6 +15,6 @@ export const test = base.extend<TestOptions>({
         await context.close()
     },
     apiBaseUrl: ({}, use) => {
-        use('https://swapi.dev/api/')
+        use('https://swapi.dev/api')
     },
 })
