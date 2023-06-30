@@ -36,3 +36,9 @@ state.json
 /playwright/.cache/
 /tests/resources/har/*
 !/tests/resources/har/*.har
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
