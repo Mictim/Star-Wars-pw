@@ -10,8 +10,8 @@ export const test = base.extend<TestOptions>({
         const browser = await playwright.chromium.launch({
             proxy: {
                 server: process.env.CI
-                    ? 'http://10.14.38.3:3128'
-                    : 'http://sia-lb.telekom.de:8080',
+                    ? 'http://proxy-cicd.com:3128'// proxy for CI/CD
+                    : 'http://proxy-local:3128',// proxy for local,
                 bypass: 'localhost, 127.0.0.1'
             }
         });
