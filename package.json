@@ -5,8 +5,8 @@
   "dependencies": {
     "@playwright/experimental-ct-react17": "^1.32.2",
     "@vanilla-extract/vite-plugin": "^3.8.0",
-    "allure-commandline": "^2.21.0",
-    "allure-playwright": "^2.1.0",
+    "allure-commandline": "^2.23.1",
+    "allure-playwright": "^2.5.0",
     "axios": "^0.24.0",
     "crypto-js": "^4.1.1",
     "react": "^17.0.2",
